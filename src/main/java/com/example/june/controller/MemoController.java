@@ -15,12 +15,12 @@ public class SlideController {
 
     @GetMapping("/index")
     public String index() {
-        return "slide/index";
+        return "memo/index";
     }
 
     @GetMapping("/create")
     public String create() {
-        return "slide/create";
+        return "memo/create";
     }
 
     @GetMapping("/store")
