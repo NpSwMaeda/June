@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>June</title>
+    <link rel="stylesheet" media="all" th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.min.css}" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="/css/app.css" th:href="@{/css/app.css}" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{/}" >June</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="Navber">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/index}">List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/create}">Create<span class="sr-only">(現位置)</span></a>
+            </li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+
+<div class="content">
+    <div class="sub-title m-b-md">
+        Create
+    </div>
+
+    <div class="col-md-6 offset-md-3">
+
+        <form role="form" action="/simple/confirm" th:action="@{/store}" method="post">
+            <!-- text -->
+            <div class="form-group">
+                <label class="control-label" for="inputText"><b>Text</b></label>
+                <input type="text" class="form-control" id="inputText" name="title" />
+            </div>
+            <!-- date type text -->
+            <div class="form-group">
+                <label class="control-label" for="inputDateText">Date type text</label>
+                <textarea class="form-control" id="inputDateText" name="body"></textarea>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+<script type="text/javascript" th:src="@{/webjars/jquery/1.12.4/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
+</body>
+</html>
