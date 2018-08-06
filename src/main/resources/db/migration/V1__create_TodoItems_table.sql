@@ -1,4 +1,4 @@
-CREATE TABLE slides
+CREATE TABLE memos
 (
   id serial NOT NULL,
   title text,
